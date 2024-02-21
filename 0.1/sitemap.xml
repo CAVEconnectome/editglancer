@@ -6,11 +6,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://caveconnectome.github.io/editglancer/0.1/api/</loc>
-         <lastmod>2024-02-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://caveconnectome.github.io/editglancer/0.1/changelog/</loc>
          <lastmod>2024-02-21</lastmod>
          <changefreq>daily</changefreq>
@@ -22,6 +17,11 @@
     </url>
     <url>
          <loc>https://caveconnectome.github.io/editglancer/0.1/installation/</loc>
+         <lastmod>2024-02-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://caveconnectome.github.io/editglancer/0.1/examples/example/</loc>
          <lastmod>2024-02-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
