@@ -29,7 +29,7 @@ jobs:
           poetry version "$(poetry version -s).post.dev${{ github.run_number }}"
           poetry build
       - name: Store the distribution packages
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: test-python-package-distributions
           path: dist/
