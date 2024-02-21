@@ -21,6 +21,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://caveconnectome.github.io/editglancer/dev/examples/example/</loc>
+         <lastmod>2024-02-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://caveconnectome.github.io/editglancer/dev/reference/reference/</loc>
          <lastmod>2024-02-21</lastmod>
          <changefreq>daily</changefreq>
