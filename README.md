@@ -6,8 +6,8 @@
 
 Tools for visualizing neuron edits in neuroglancer from Python scripts.
 
-- Documentation: <https://bdpedigo.github.io/editglancer>
-- GitHub: <https://github.com/bdpedigo/editglancer>
+- Documentation: <https://caveconnectome.github.io/editglancer>
+- GitHub: <https://github.com/CAVEconnectome/editglancer>
 - PyPI: <https://pypi.org/project/editglancer/>
 - Free software: MIT
 
