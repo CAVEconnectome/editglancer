@@ -1,7 +1,7 @@
 site_name: editglancer
-site_url: https://bdpedigo.github.io/editglancer
-repo_url: https://github.com/bdpedigo/editglancer
-repo_name: bdpedigo/editglancer
+site_url: https://caveconnectome.github.io/editglancer
+repo_url: https://github.com/CAVEconnectome/editglancer
+repo_name: CAVEconnectome/editglancer
 edit_uri: edit/main/docs/
 #strict: true
 nav:
@@ -101,7 +101,7 @@ plugins:
   #     show_contribution: true
   #     authorship_threshold_percent: 5
   - git-committers:
-      repository: bdpedigo/editglancer
+      repository: CAVEconnectome/editglancer
       branch: main
   - git-revision-date-localized:
       enable_creation_date: true
@@ -111,7 +111,7 @@ plugins:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/bdpedigo/editglancer
+      link: https://github.com/CAVEconnectome/editglancer
       name: Github
     - icon: material/email
       link: "mailto:ben.pedigo@alleninstitute.org"

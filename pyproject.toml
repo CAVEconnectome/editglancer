@@ -1,27 +1,30 @@
 [tool]
 [tool.poetry]
-name = "editglancer"
-version = "0.1.0"
-homepage = "https://github.com/bdpedigo/editglancer"
-description = "Tools for visualizing neuron edits in neuroglancer from Python scripts.."
 authors = ["Ben Pedigo <ben.pedigo@alleninstitute.org>"]
-readme = "README.md"
-license =  "MIT"
-classifiers=[
+classifiers = [
     'Development Status :: 2 - Pre-Alpha',
     'Intended Audience :: Developers',
     'License :: OSI Approved :: MIT License',
     'Natural Language :: English',
     'Programming Language :: Python :: 3.11',
 ]
+description = "Tools for visualizing neuron edits in neuroglancer from Python scripts."
+homepage = "https://github.com/bdpedigo/editglancer"
+license = "MIT"
+name = "editglancer"
 packages = [
     { include = "editglancer" },
     { include = "tests", format = "sdist" },
 ]
+readme = "README.md"
+version = "0.1.0"
 
 [tool.poetry.dependencies]
-python = ">=3.11.0,<3.12.0"
 beartype = "^0.16.4"
+python = ">=3.11.0,<3.13.0"
+
+[tool.poetry.group.dev]
+optional = true
 
 [tool.poetry.group.dev.dependencies]
 commitizen = "^3.13.0"
