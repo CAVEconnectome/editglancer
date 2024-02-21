@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#title-reference" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -378,6 +383,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Reference
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -387,6 +403,74 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#title-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      title: Reference
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editglancer" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-module"></code>&nbsp;editglancer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" editglancer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#editglancer.generate_link_for_root" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;generate_link_for_root
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editglancer.generate_statebuilder" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;generate_statebuilder
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editglancer.get_detailed_operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-function"></code>&nbsp;get_detailed_operations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -465,7 +549,186 @@
 
   <h1>Reference</h1>
 
-<p>Documentation for the top-level package of editglancer</p>
+<h3 id="title-reference">title: Reference<a class="headerlink" href="#title-reference" title="Permanent link">&para;</a></h3>
+
+
+<div class="doc doc-object doc-module">
+
+
+
+<h2 id="editglancer" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-module"></code>          <code>editglancer</code>
+
+
+<a href="#editglancer" class="headerlink" title="Permanent link">&para;</a></h2>
+
+  <div class="doc doc-contents first">
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="editglancer.generate_link_for_root" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">generate_link_for_root</span><span class="p">(</span><span class="n">root_id</span><span class="p">,</span> <span class="n">client</span><span class="p">,</span> <span class="n">return_as</span><span class="o">=</span><span class="s1">&#39;html&#39;</span><span class="p">)</span></code>
+
+<a href="#editglancer.generate_link_for_root" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Generate a neuroglancer link showing edit information for a given root id.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>root_id</code></td>
+          <td>
+                <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The root id in a segmentation to generate the link for.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>client</code></td>
+          <td>
+                <code><span title="caveclient.CAVEclient">CAVEclient</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The CAVE client object to use for the link generation.</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>return_as</code></td>
+          <td>
+                <code><span title="editglancer.editglancer.ReturnAsType">ReturnAsType</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Choice of output type. One of ['url', 'viewer', 'html', 'json', 'dict', 'shared']
+Note that if a viewer is returned, the state is not reset.
+    "url" : Returns the raw url describing the state
+    "viewer" : Returns an nglui.easyviewer.EasyViewer object holding the state
+    "html" : Returns an HTML link to the url, useful for notebooks.
+    "json" : Returns a JSON string describing the state.
+    "dict" : Returns a dict version of the JSON state.</p>
+            </div>
+          </td>
+          <td>
+                <code>&#39;html&#39;</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-external" title="typing.Union" href="https://docs.python.org/3/library/typing.html#typing.Union">Union</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <span title="nglui.easyviewer.EasyViewer">EasyViewer</span>, <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>]</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The neuroglancer link for the given root id. The type of the output is
+determined by the <code>return_as</code> parameter.</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="editglancer.generate_statebuilder" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">generate_statebuilder</span><span class="p">(</span><span class="n">client</span><span class="p">)</span></code>
+
+<a href="#editglancer.generate_statebuilder" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Generate a statebuilder object with the current viewer resolution.</p>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="editglancer.get_detailed_operations" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-function"></code>          <code class="highlight language-python"><span class="n">get_detailed_operations</span><span class="p">(</span><span class="n">root_id</span><span class="p">,</span> <span class="n">client</span><span class="p">)</span></code>
+
+<a href="#editglancer.get_detailed_operations" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Get a detailed dataframe of operations for a given root id.</p>
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
 
 
 
