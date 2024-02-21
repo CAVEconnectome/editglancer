@@ -13,7 +13,7 @@ Tools for visualizing neuron edits in neuroglancer from Python scripts.
 
 ## Features
 
-- TODO
+- Allows for easy creation of neuroglancer links which display a neuron and annotations for the edits which have been performed on it
 
 ## Credits
 
